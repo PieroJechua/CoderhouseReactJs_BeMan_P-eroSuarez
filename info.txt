@@ -1,0 +1,5 @@
+Los app de react se forman por uno o más componentes:
+
+1- Todos los componentes de React son funciones
+2- Siempre se nombran con mayusculas
+3- Los componentes pueden retornar un unico elemento
