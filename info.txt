@@ -3,3 +3,8 @@ Los app de react se forman por uno o más componentes:
 1- Todos los componentes de React son funciones
 2- Siempre se nombran con mayusculas
 3- Los componentes pueden retornar un unico elemento
+
+
+Al construir un componente, estas construyendo una sección dinámica de la web.
+
+Dentro de los componentes, al ser funciones, puedes incluir paramentros comumente conocidos como "props". Este último responde al parametro de una función usual. 
