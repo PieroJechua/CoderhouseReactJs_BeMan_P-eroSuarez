@@ -2,6 +2,7 @@ import ItemListContainer from './ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card} from 'react-bootstrap';
 
+
 const Main = ()=>{
     return (
         <main>
@@ -14,9 +15,13 @@ const Main = ()=>{
                     <Card.Title>Producto uno</Card.Title>
                         <Card.Text>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, perferendis possimus.
-                    </Card.Text>
+                        </Card.Text>
+
+                        
+
                 </Card.Body>
             </Card>
+
             
         </main>
     )

@@ -8,3 +8,36 @@ Los app de react se forman por uno o más componentes:
 Al construir un componente, estas construyendo una sección dinámica de la web.
 
 Dentro de los componentes, al ser funciones, puedes incluir paramentros comumente conocidos como "props". Este último responde al parametro de una función usual. 
+
+Nota de parametros.
+
+Los parametros solo funcionan dentro de una función.
+
+recuerda que un componente detalles la función y esta la puedes llamar desde otros componentes. Al llamar la función, recuerda usar el formato JSX, puedes detallar los parametros que requieras, recuerda usar {}.
+
+Por ejemplo.
+
+En componente X construyes la función
+
+const foo (promp) {
+    if (promp = true){
+        return (
+            ....
+        )
+    } else{
+        return(
+            ....
+        )
+    }
+}
+
+Y en otro componente Y llamas a la función y agergas el parametro que requieras
+
+<componenteX nombredelpromp={false}/>
+
+Recuerda que todos los componentes son funciones.
+
+
+Ahora tendras disponible los Hooks
+
+HOOKS: Son funciones que se incorporan nuevas herramientas en un componente como capacidad de tener estado, ciclos de vida, etc.

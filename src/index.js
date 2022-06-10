@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 //Importamos el componente App
-import App from './components/App';
+import App from './App';
 
 //Importamos el css
 
