@@ -41,3 +41,12 @@ Recuerda que todos los componentes son funciones.
 Ahora tendras disponible los Hooks
 
 HOOKS: Son funciones que se incorporan nuevas herramientas en un componente como capacidad de tener estado, ciclos de vida, etc.
+
+En otras palabras funcionan como plungins cada uno cargado de una funcionalidad (simple o compleja)
+    - Estos no pueden ser llamados dentro de bucles o condicionales. Siempre deben estar por fuera.
+
+    - Uno de estos es el useState que nos permite jalar estados.
+        Siempre que cambia la variable dentro del useState (siempre que cambia el estado) se vuelve a renderizar. Es decir se corre todo de nuevo.
+    
+    - Otro es el useEffect que nos permite correr otra función (otro componente en paralelo)
+    
