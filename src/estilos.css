@@ -2,3 +2,10 @@ body{
     background-color: bisque;
 }
 
+.detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid red;
+
+}

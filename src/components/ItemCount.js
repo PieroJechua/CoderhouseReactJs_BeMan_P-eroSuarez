@@ -29,7 +29,6 @@ const ItemCount = ({Stock, Initial, onAdd}) => {
         setContador (contador - contador);
         }
     }
-    
 
     //El bloque que regresas(muestras) en el DOM
     return(

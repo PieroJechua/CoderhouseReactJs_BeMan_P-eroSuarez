@@ -1,6 +1,8 @@
 import React from 'react';
 import Item from './Item';
 
+//Aqui se construye la promesa que armará los item. 
+
 function ItemList ({products}){
     return (
         products.map( p =>
@@ -9,7 +11,7 @@ function ItemList ({products}){
             name={p.name}
             image={p.image}
             key={p.id}
-            /> 
+            />
         )
     );
 };
