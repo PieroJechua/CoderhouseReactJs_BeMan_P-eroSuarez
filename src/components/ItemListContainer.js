@@ -1,24 +1,31 @@
 import React, {useEffect,useState} from 'react';
-import customFetch from '../utils/customFetch';
-import productos from '../utils/productos';
+import {useParams} from 'react-router-dom'
 import ItemList from './ItemList';
 
 const ItemListContainer = (props) => {
     //Creamos un estado que cuambiará cuando se empiecen a jalar los items. La función setItems actualizará los valores del array.
     const [items, setItems] = useState([]);
+    const resultado = useParams ()
 
-    //llamaremos a la promesa customfetch
     useEffect(() => {
-        customFetch (3000,productos)
-        .then(resultado => setItems(resultado))
-    }, [items])
+    fetch("https://fakestoreapi.com/products")
+        .then((respuesta) => {
+            const p = respuesta.json()
+            return p
+        })
+        .then((items)=>{
+            setItems(items)
+        })
+        .catch((error) => {
+            console.log("Hubo un error")
+        })
+    }, [])
 
     return (
-        <>
-            <h2> Lista de productos</h2>
-            <p> {props.saludo}</p>
+        <section className='slogan'>
+            <p> {props.slogan}</p>
             <ItemList products = {items}/>
-        </>
+        </section>
     )
 };
 

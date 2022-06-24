@@ -1,5 +1,6 @@
 import {useState} from "react";
 
+
 const ItemCount = ({Stock, Initial, onAdd}) => {
 
     //Defines el useState [variable inicial, función(*)]
@@ -32,12 +33,17 @@ const ItemCount = ({Stock, Initial, onAdd}) => {
 
     //El bloque que regresas(muestras) en el DOM
     return(
-        <>
-            <p> El contador va en: {contador} </p>
-            <button onClick = {aumentarContador}>Aumentar</button>
-            <button onClick = {disminuirContador}>Disminuir</button>
-            <button onClick = {enviarContador}> Agregar carrito </button>
-        </>
+        <div className="contador">
+            <div>
+                <button onClick = {aumentarContador} className="boton-contador">+</button>
+
+                <p> {contador} </p>
+
+                <button onClick = {disminuirContador} className="boton-contador">-</button>
+
+            </div>
+            <button onClick = {enviarContador} className="agregar-carrito"> Agregar carrito </button>
+        </div>
     );
 };
 

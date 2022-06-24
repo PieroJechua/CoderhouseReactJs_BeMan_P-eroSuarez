@@ -1,24 +1,20 @@
 import React, {useState,useEffect} from 'react';
+import {useParams} from 'react-router-dom'
 import ItemDetail from './ItemDetail'
-import traerProducto from '../utils/traerProducto';
 
 const ItemDetailContainer  = () => {
     //Declaramos el estado para un solo producto
     const[Product,setProduct] = useState ({});
 
-    //Declaramos la promesa que nos ayudará a traer la descripción del producto.
-    //UseEffect tiene la función(promesa) que puede tener un resultado positivo Then o negativo catch
+    const id = useParams ()
+    const idproducto = (parseInt(id.id))
+
     useEffect( ()=>{
-        traerProducto()
-        .then( (res)=>{
-            setProduct(res);
-        })
-        .catch((error)=>{
-            console.log(error);
-        })
+        fetch(`https://fakestoreapi.com/products/${idproducto}`)
+        .then(res=>res.json())
+        .then(json=>setProduct(json))
     }, [])
 
-    console.log (Product);
     return  (
         <ItemDetail Product={Product}  />
     );

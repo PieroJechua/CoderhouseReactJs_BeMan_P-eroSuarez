@@ -7,11 +7,12 @@ const ItemDetail = ({Product}) => {
             <img src={Product.image}alt="Product.name"
             width="400" />
             <div>
-                <h4>{Product.name}</h4>
-                <p>{Product.descripcion}</p>
-                <p>Precio: {Product.precio}</p>
+                <h4>{Product.title}</h4>
+                <p>{Product.description}</p>
+                <p className='detalle-precio'>Precio: {Product.price}</p>
                 <ItemCount Stock={10} Initial={0} onAdd ={()=>{}} />
             </div>
+
         </div>
     );
 };

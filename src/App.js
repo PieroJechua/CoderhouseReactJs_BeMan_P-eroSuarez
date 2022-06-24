@@ -1,20 +1,17 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer'
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter} from "react-router-dom"
 
 //Construir el componente
 function App (){
     return(
-        <>
+        <BrowserRouter>
             <Header/>
             <Main/>
-            <ItemListContainer saludo= "Bienvenido a nuestra tienda amigo"/>
-            <ItemDetailContainer/>
             <Footer/>
-        </>
+        </BrowserRouter>
         )
 };
 

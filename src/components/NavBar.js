@@ -1,16 +1,20 @@
 import CartWidget from './CartWidget';
-
+import {Link} from 'react-router-dom'
 
 const NavBar = (props) => {
 
     if(props.inheader){
         return (
-            <nav>
-                <a href="###">Home</a>
-                <a href="###">Productos</a>
-                <a href="###">Contactanos</a>
-                <a href="###">Preguntras Frecuentes</a>
-                <CartWidget/>
+            <nav className='menu-header'>
+                <div>
+                    <Link to="/"><h1>BeMan</h1></Link>
+                    <Link to="/">Home</Link>
+                    <Link to="/categoria/jewelery">jewelery</Link>
+                    <Link to="/categoria/electronics">electronics</Link>
+                    <Link to="/categoria/clothing">clothing</Link>
+
+                    <CartWidget/>
+                </div>
             </nav>
         );
     }else{
